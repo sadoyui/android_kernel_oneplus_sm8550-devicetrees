@@ -5,14 +5,6 @@ ifeq ($(CONFIG_WUKONG_DTB),y)
 OPLUS_KALAMA_BOARDS += \
 		wukong-21131-kalama-overlay.dtbo \
 		wukong-21131-kalama-overlay-EVB.dtbo
-else ifeq ($(CONFIG_XIGUA_DTB),y)
-OPLUS_KALAMA_BOARDS += \
-		xigua-22851-kalama-overlay.dtbo \
-		xigua-22851-kalama-overlay-EVB.dtbo
-else ifeq ($(CONFIG_ZONDA_DTB),y)
-OPLUS_KALAMA_BOARDS += \
-		zonda-22635-kalama-overlay.dtbo \
-		zonda-23603-kalama-overlay.dtbo
 else ifeq ($(CONFIG_SALAMI_DTB),y)
 OPLUS_KALAMA_BOARDS += \
 		salami-22811-kalama-overlay.dtbo \
@@ -21,6 +13,16 @@ OPLUS_KALAMA_BOARDS += \
 else ifeq ($(CONFIG_XUEYING_DTB),y)
 OPLUS_KALAMA_BOARDS += \
 		xueying-22003-kalama-overlay.dtbo
+endif
+
+else ifeq ($(CONFIG_XIGUA_DTB),y)
+OPLUS_KALAMA_BOARDS += \
+		xigua-22851-kalama-overlay.dtbo \
+		xigua-22851-kalama-overlay-EVB.dtbo
+else ifeq ($(CONFIG_ZONDA_DTB),y)
+OPLUS_KALAMA_BOARDS += \
+		zonda-22635-kalama-overlay.dtbo \
+		zonda-23603-kalama-overlay.dtbo
 endif
 
 kalama-overlays-dtb-y += $(OPLUS_KALAMA_BOARDS) $(KALAMA_BASE_DTB) $(KALAMA_APQ_BASE_DTB)
